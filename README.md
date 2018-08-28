@@ -24,12 +24,50 @@ And then used as:
 
 
 ## <a name="pkg-index">Index</a>
+* [type Client](#Client)
+  * [func New() *Client](#New)
+  * [func (c *Client) Do(in *http.Request) (out *http.Response, err error)](#Client.Do)
 
 
 #### <a name="pkg-files">Package files</a>
-[doc.go](/src/github.com/go-lo/fasthttp-client/doc.go) 
+[client.go](/src/github.com/go-lo/fasthttp-client/client.go) [doc.go](/src/github.com/go-lo/fasthttp-client/doc.go) 
 
 
+
+
+
+
+## <a name="Client">type</a> [Client](/src/target/client.go?s=198:253#L13)
+``` go
+type Client struct {
+    // contains filtered or unexported fields
+}
+```
+Client wraps a fasthttp.Client, allowing for the casting of
+net/http types to fasthttp types.
+
+
+
+
+
+
+
+### <a name="New">func</a> [New](/src/target/client.go?s=350:368#L19)
+``` go
+func New() *Client
+```
+New returns a new, fully instantiated Client which can be
+dropped in to a go-lo schedule
+
+
+
+
+
+### <a name="Client.Do">func</a> (\*Client) [Do](/src/target/client.go?s=485:554#L26)
+``` go
+func (c *Client) Do(in *http.Request) (out *http.Response, err error)
+```
+Do will action an http request and return stuff
 
 
 
